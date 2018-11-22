@@ -7,16 +7,18 @@ describe 'working through various arrays' do
 
     it 'the first entry should equal jack russel' do
       # Use array methods only
+      # puts dog_breeds.methods
+      expect(dog_breeds.first).to eq 'jack russell'
     end
 
     it 'the last entry should equal greyhound' do
       # Use array methods only
-      pending
+      expect(dog_breeds.last).to eq 'greyhound'
     end
 
     it 'the second entry should equal boxer' do
       # Use array index only i.e. array[0]
-      pending
+      expect(dog_breeds[1]).to eq 'boxer'
     end
 
   end
@@ -27,17 +29,17 @@ describe 'working through various arrays' do
 
     it 'the first dog name should equal archie' do
       # Use a mix of array methods and indexes
-      pending
+      expect(dog_breed_and_names[0].last).to eq 'archie'
     end
 
     it 'the second last entry should be a bloodhound called droopy' do
       # Use array index only i.e. array[0]
-      pending
+      expect(dog_breed_and_names[2].last).to eq 'droopy'
     end
 
     it 'the second entry should be a boxer' do
       # Use array index only i.e. array[0]
-      pending
+      expect(dog_breed_and_names[1].first).to eq 'boxer'
     end
 
   end
@@ -47,17 +49,20 @@ describe 'working through various arrays' do
 
     it 'the last dog should be called streak and is an old dog' do
       # Use a mix of array methods and indexes
-      pending
+      expect(dog_breed_names_age_and_health.last[1]).to eq 'streak'
+      expect(dog_breed_names_age_and_health.last.last.last).to eq 'old dog'
     end
 
     it 'the bloodhound should be 6 years old and healthy' do
       # Use a mix of array methods and indexes
-      pending
+      expect(dog_breed_names_age_and_health[2].last[0]).to eq 6
+      expect(dog_breed_names_age_and_health[2].last[1]).to eq 'healthy'
     end
 
     it 'the first dog should be a jack russell and 4 years old' do
       # Use array index only i.e. array[0]
-      pending
+      expect(dog_breed_names_age_and_health[0].first).to eq 'jack russell'
+      expect(dog_breed_names_age_and_health[0].last[0]).to eq 4
     end
 
   end
