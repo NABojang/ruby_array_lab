@@ -38,15 +38,19 @@ describe 'Create tests for a hash' do
 
   it 'plums and apples should get no calories from fat' do
     expect(small_fruit_nutrition_details[:plums][:calories_from_fat]).to eq 0
-    expect(small_fruit_nutrition_details[:apple][:calories_from_fat]).to eq 0
+    expect(small_fruit_nutrition_details[:apple ][:calories_from_fat]).to eq 0
   end
 
   it 'each fruit should have 4 keys' do
-    pending
+    small_fruit_nutrition_details.each do |key, val|
+      expect(val.length).to eq 4
+    end
   end
 
   it 'all calories should be between 40 to 150' do
-    pending
+    small_fruit_nutrition_details.each do |key, val|
+      expect(val[:calories]).to be_between(40,150).inclusive
+    end
   end
 
 end
